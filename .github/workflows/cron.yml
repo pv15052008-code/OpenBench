@@ -1,0 +1,17 @@
+# Every 10 minutes: mark no-shows and overdue returns, send pending emails,
+# and keep the free Render instance awake during judging.
+name: cron
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call /cron/tick
+        env:
+          API_URL: ${{ secrets.API_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          curl -fsS --retry 3 --retry-delay 20 --max-time 90 -X POST "$API_URL/cron/tick" -H "X-Cron-Secret: $CRON_SECRET"

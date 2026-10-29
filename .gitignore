@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and secrets
+.env
+.env.*
+*.env
+!.env.example
+*.pem
+*.key
+*.cert
+
+# Python & virtual environments
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*$py.class
+.coverage
+htmlcov/
+
+# Supabase local state & runtime secrets
+supabase/.temp/
+supabase/.branches/
+
+# Mobile, Expo & Web builds
+.expo/
+dist/
+web-build/
+apps/mobile/ios/
+apps/mobile/android/
+apps/mobile/expo-env.d.ts
+
+# Logs
+*.log
+services/api/api.log
+
+# IDEs & OS metadata
+.DS_Store
+Thumbs.db
+.claude/
+.vscode/
+.idea/
+
+apps/mobile/.git
+apps/mobile/.git-backup
+
+apps/mobile/.git
+
+apps/mobile-clean/.env
+
+apps/mobile/.env
+apps/mobile-clean/.env
+
+# Keep original nested frontend repository local
+/apps/mobile/
+
+apps/mobile-clean/.env

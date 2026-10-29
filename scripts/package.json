@@ -1,0 +1,16 @@
+{
+  "name": "openbench-scripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed": "node seed-demo.mjs",
+    "up": "node local-up.mjs",
+    "down": "node local-down.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.118.0"
+  },
+  "devDependencies": {
+    "supabase": "^2.122.0"
+  }
+}

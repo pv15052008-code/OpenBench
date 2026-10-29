@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "OpenBench",
+    "slug": "openbench",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "openbench",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B3F49"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "in.openbench.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "OpenBench uses the camera to record the condition of equipment at check-in and return.",
+        "NSPhotoLibraryUsageDescription": "OpenBench lets you attach photos and certificates from your library."
+      }
+    },
+    "android": {
+      "package": "in.openbench.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png",
+        "backgroundColor": "#0B3F49"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_MEDIA_IMAGES"
+      ],
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png",
+      "name": "OpenBench",
+      "shortName": "OpenBench",
+      "themeColor": "#0B3F49",
+      "backgroundColor": "#0B3F49",
+      "display": "standalone"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-web-browser",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "OpenBench uses the camera to record equipment condition."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#0B3F49"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

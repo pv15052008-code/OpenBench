@@ -1,0 +1,30 @@
+# Render blueprint for the engine API. Secrets are entered in the Render dashboard (sync: false).
+services:
+  - type: web
+    name: openbench-api
+    runtime: docker
+    rootDir: services/api
+    plan: free
+    region: singapore
+    healthCheckPath: /health
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.8-flash
+      - key: RESEND_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: APP_URL
+        sync: false
+      - key: CRON_SECRET
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        sync: false

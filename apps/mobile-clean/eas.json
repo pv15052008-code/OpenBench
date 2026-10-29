@@ -1,0 +1,17 @@
+{
+  "cli": { "version": ">= 16.0.0", "appVersionSource": "remote" },
+  "build": {
+    "preview": {
+      "distribution": "internal",
+      "android": { "buildType": "apk" },
+      "ios": { "simulator": false },
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "set-in-eas-env",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "set-in-eas-env",
+        "EXPO_PUBLIC_API_URL": "set-in-eas-env"
+      }
+    },
+    "production": { "autoIncrement": true }
+  },
+  "submit": { "production": {} }
+}
